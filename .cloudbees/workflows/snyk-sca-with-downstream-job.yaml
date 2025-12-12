@@ -18,10 +18,6 @@ jobs:
     steps:
       - name: Check Out Source Code
         uses: cloudbees-io/checkout@v1
-        with:
-          repository: lprabhakaran/Python-Open-Assistant
-          ref: test-snyk-sca
-          token: ${{ secrets.GIT_PAT }}
 
       - id: snyk-sca-step
         name: Snyk SCA Scan

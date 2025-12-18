@@ -1,6 +1,9 @@
 name: snyk-sca-publish-scan
 
-on: [workflow_dispatch]
+on:
+  push:
+    branches:
+      - test-gha-action
 
 jobs:
   snyk-sca-scan:

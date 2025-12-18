@@ -28,5 +28,5 @@ jobs:
       - name: Snyk sca scan
         uses: cloudbees-io-gha/snyk-sca-publish@v1
         with:
-          server-url: ${{ vars.SNYK_ORG_ID }}
-          api-token: ${{ secrets.SNYK_TOKEN}}
+          org-id: ${{ vars.SNYK_ORG_ID }}
+          snyk-token: ${{ secrets.SNYK_TOKEN}}

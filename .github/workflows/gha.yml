@@ -3,7 +3,7 @@ name: snyk-sca-publish-scan
 on: [workflow_dispatch]
 
 jobs:
-  blackduck-codescan:
+  snyk-sca-scan:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -22,7 +22,7 @@ jobs:
           echo "Job is $GITHUB_JOB"
           echo "Step id is ${{ steps.internal.id }}"
 
-      - name: Blackduck scan
+      - name: Snyk sca scan
         uses: cloudbees-io-gha/snyk-sca-publish@v2
         with:
           server-url: ${{ vars.SNYK_ORG_ID }}
